@@ -1,0 +1,16 @@
+{
+  "name": "Python 3.11 Objectron",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "forwardPorts": [8501],
+  "postCreateCommand": "python -m pip install --upgrade pip && pip install -r requirements.txt",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "ms-python.python"
+  ],
+  "remoteUser": "vscode"
+}
