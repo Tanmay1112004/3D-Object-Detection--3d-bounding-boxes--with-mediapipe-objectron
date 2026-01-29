@@ -1,94 +1,104 @@
 # 📦 Objectron Streamlit App (MediaPipe)
 
-A **Streamlit web app** that uses **MediaPipe Objectron** to detect 3D bounding boxes around objects (cup, chair, shoe, camera) in images.
-It displays **colored 3D landmarks**, **rotation matrices**, **translation vectors**, and lets you **download pose data as CSV**.
-
-Runs inside **GitHub Codespaces (Python 3.11)** or locally.
+A robust **Streamlit** interface for **MediaPipe Objectron**, enabling real-time 3D object detection and pose estimation. This application detects 3D bounding boxes around common objects and extracts spatial data suitable for robotics, AR, and research.
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
-* 🖼️ Input image via **URL** or **file upload**
-* 🪑 Choose object model: **Cup / Chair / Shoe / Camera**
-* 🎨 Colored 3D bounding boxes & landmarks (visible even on white backgrounds)
-* 📊 Rotation matrix & translation vector tables
-* 📥 Download pose data as **CSV**
-* ⚡ Optional auto-resize for large images (faster inference)
-
----
-
-## ⚡ Quick Start (GitHub Codespaces)
-
-1. Fork or clone this repo to your GitHub.
-2. In your repo → **Code → Codespaces → Create Codespace** (choose branch).
-3. Wait for the devcontainer to build (first time takes a few mins).
-4. In the Codespace terminal, run:
-
-   ```bash
-   streamlit run streamlit_app.py --server.port 8501 --server.address 0.0.0.0 --server.enableCORS false
-   ```
-5. Open the forwarded port **8501** → app loads in browser.
+* **3D Detection:** Supports **Cup, Chair, Shoe, and Camera** models.
+* **Spatial Data:** Visualizes rotation matrices and translation vectors in real-time.
+* **Smart Visualization:** High-contrast colored 3D landmarks designed for visibility against any background.
+* **Dual Input:** Process images via **Direct URL** or **Local File Upload**.
+* **Data Export:** One-click download of pose estimation data as a **CSV** file.
+* **Optimized Performance:** Built-in auto-resize toggle to handle high-resolution images efficiently.
 
 ---
 
-## 🖥️ Local Run (optional)
+## ⚡ Quick Start: GitHub Codespaces
 
-1. Install **Python 3.11** on your system.
-2. Clone repo and create venv:
+The fastest way to run this project is via **GitHub Codespaces**, which comes pre-configured with all necessary system dependencies (like `libGL`).
 
-   ```bash
-   git clone <your-repo-url>
-   cd <repo>
-   python3.11 -m venv .venv
-   source .venv/bin/activate
-   ```
-3. Install dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Run the app:
-
-   ```bash
-   streamlit run streamlit_app.py
-   ```
-
----
-
-## 🛠️ Repo Structure
+1. **Fork** this repository.
+2. Click the **Code** button → **Codespaces** → **Create codespace on main**.
+3. Once the environment is ready, run the following in the terminal:
+```bash
+streamlit run streamlit_app.py --server.port 8501 --server.address 0.0.0.0
 
 ```
+
+
+4. Click **Open in Browser** when the port forwarding notification appears.
+
+---
+
+## 🖥️ Local Installation
+
+If you prefer to run the application locally, follow these steps:
+
+### Prerequisites
+
+* **Python 3.11**
+* A virtual environment manager (`venv` or `conda`)
+
+### Setup
+
+```bash
+# 1. Clone the repository
+git clone <your-repo-url>
+cd <repo-name>
+
+# 2. Create and activate a virtual environment
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Launch the application
+streamlit run streamlit_app.py
+
+```
+
+---
+
+## 📂 Project Structure
+
+```bash
 📂 repo-root
- ┣ 📂 .devcontainer       # Devcontainer setup for GitHub Codespaces
- ┃ ┣ 📜 Dockerfile
+ ┣ 📂 .devcontainer    # Pre-configured environment for Codespaces
+ ┃ ┣ 📜 Dockerfile     # Installs system-level dependencies (libGL, etc.)
  ┃ ┗ 📜 devcontainer.json
- ┣ 📜 streamlit_app.py    # Main Streamlit app
- ┣ 📜 requirements.txt    # Python dependencies
- ┗ 📜 README.md           # This file
+ ┣ 📜 streamlit_app.py # Core application logic
+ ┣ 📜 requirements.txt # Python package list
+ ┗ 📜 README.md        # Documentation
+
 ```
 
 ---
 
-## 🐞 Troubleshooting
+## 🛠️ Troubleshooting
 
-* **Error: `ImportError: libGL.so.1`**
-  → The Codespace Dockerfile already installs `libgl1`. If you created Codespace before adding `.devcontainer`, rebuild it or run:
+| Issue | Solution |
+| --- | --- |
+| **`libGL.so.1` Not Found** | Run: `sudo apt-get update && sudo apt-get install -y libgl1 libglib2.0-0` |
+| **Slow Inference** | Enable the **Auto-resize** feature in the sidebar (Set `max_dim` to ~800). |
+| **No Objects Detected** | Ensure the object is well-lit and matches the selected category (e.g., don't use 'Shoe' for a 'Cup'). |
 
-  ```bash
-  sudo apt-get update && sudo apt-get install -y libgl1 libglib2.0-0
-  ```
+---
 
-* **Mediapipe install issues**
-  → Rebuild the Codespace so dependencies are installed inside the container.
+## 📊 Output Data Format
 
-* **App slow on big images**
-  → Enable **Auto-resize** in app (recommended `max_dim=800–1200`).
+The application generates a CSV containing the following spatial coordinates:
+
+* **2D Points:** Image-space landmarks (x, y).
+* **3D Points:** Camera-coordinate space landmarks (x, y, z).
+* **Pose:** 3x3 Rotation Matrix and 3x1 Translation Vector.
 
 ---
 
 ## 📄 License
 
-MIT License — feel free to modify and use.
+Distributed under the **MIT License**. See `LICENSE` for more information.
 
 ---
