@@ -8,7 +8,13 @@ An end-to-end **computer vision application** that leverages **MediaPipe Objectr
 
 ## 🎥 Demo Preview
 
+![demo](https://github.com/Tanmay1112004/3D-Object-Detection--3d-bounding-boxes--with-mediapipe-objectron/blob/main/screenshots/Screenshot%202025-09-07%20184454.png)
 
+![demo](https://github.com/Tanmay1112004/3D-Object-Detection--3d-bounding-boxes--with-mediapipe-objectron/blob/main/screenshots/Screenshot%202025-09-07%20185120.png)
+
+![demo](https://github.com/Tanmay1112004/3D-Object-Detection--3d-bounding-boxes--with-mediapipe-objectron/blob/main/screenshots/Screenshot%202025-09-07%20185227.png)
+
+![demo](https://github.com/Tanmay1112004/3D-Object-Detection--3d-bounding-boxes--with-mediapipe-objectron/blob/main/screenshots/Screenshot%202025-09-07%20185135.png)
 
 ---
 
