@@ -1,7 +1,3 @@
-Alright Tanmay, this is already a **strong project** — but I’ll level it up into a **recruiter-grade README** that screams *“this guy can build real systems”*. Clean, sharp, impactful.
-
----
-
 # 📦 Objectron 3D Detection App (MediaPipe + Streamlit)
 
 > **Real-time 3D Object Detection & Pose Estimation — Built for AR, Robotics, and Vision Systems**
@@ -223,11 +219,3 @@ MIT License
 💼 Data Science | ML Engineering | Computer Vision
 
 ---
-
-🔥 If you want, next level upgrade I can do:
-
-* Add **architecture diagram (like FAANG-level repos)**
-* Add **badges (build, stars, tech logos)**
-* Make it **LinkedIn viral post + GitHub combo strategy**
-
-Just say: *“next level README”* 🚀
