@@ -8,7 +8,7 @@ An end-to-end **computer vision application** that leverages **MediaPipe Objectr
 
 ## 🎥 Demo Preview
 
-> *(Add your screenshots / GIF here — this is what recruiters notice first 👀)*
+
 
 ---
 
