@@ -104,7 +104,7 @@ CSV Export (Spatial Data)
 ### 🔹 Run Locally
 
 ```bash
-git clone <your-repo-url>
+git clone Tanmay1112004
 cd <repo-name>
 
 python -m venv .venv
