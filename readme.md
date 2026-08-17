@@ -219,9 +219,5 @@ MIT License
 
 ---
 
-## 👨‍💻 Author
-
-**Tanmay Kshirsagar**
-💼 Data Science | ML Engineering | Computer Vision
 
 ---
