@@ -105,7 +105,7 @@ CSV Export (Spatial Data)
 
 ```bash
 git clone Tanmay1112004
-
+cd 3D-Object-Detection--3d-bounding-boxes--with-mediapipe-objectron
 
 python -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
